@@ -31,3 +31,6 @@ __pycache__/
 *.su
 *.idb
 *.pdb
+
+# Vagrant
+.vagrant
