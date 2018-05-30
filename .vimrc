@@ -4,6 +4,7 @@ set nocompatible
 
 set cursorline " highlight the current line
 set visualbell " stop the bell
+set noautoindent " stop vim from autoindenting pasted code
 
 " To show/hide whitespace:
 " set list
