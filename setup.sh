@@ -28,8 +28,15 @@ git -C vim-colors-solarized pull || git clone https://github.com/altercation/vim
 git -C vim-fugitive pull || git clone https://github.com/tpope/vim-fugitive
 popd
 
+# Install oh-my-zsh
+[ ! -d "~/.oh-my-zsh" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
+cp $DIR/evanmcbroom.zsh-theme .oh-my-zsh/custom/evanmcbroom.zsh-theme # Add my oh-my-zsh theme
+
+# Get current dircolors-solarized
+curl -LSso ~/.dircolors https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark
+
 # Install dotfiles
-pushd ~/
+pushd # ~/
 [ -f .bash_profile ] && mv .bash_profile .bash_profile.bck
 cp $DIR/.bash_profile .bash_profile
 [ -f .bashrc ] && mv .bashrc .bashrc.bck
@@ -41,4 +48,7 @@ cp $DIR/.gitignore_global .gitignore_global
 cp $DIR/.tmux.conf .tmux.conf
 [ -f .vimrc ] && mv .vimrc .vimrc.bck
 cp $DIR/.vimrc .vimrc
+[ -f .zshrc ] && mv .zshrc .zshrc.bck
+cp $DIR/.zshrc .zshrc
+source .zshrc
 popd
