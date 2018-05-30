@@ -5,5 +5,5 @@
 These are my dotfiles for \*nix boxes. To install, just
 
 ```bash
-git clone https://github.com/EvanMcBroom/dotfiles && ./dotfiles/setup.sh
+git clone https://github.com/EvanMcBroom/dotfiles && sudo ./dotfiles/setup.sh
 ```
