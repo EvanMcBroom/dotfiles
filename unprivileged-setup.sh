@@ -26,9 +26,12 @@ curl -LSso ~/.dircolors https://raw.githubusercontent.com/seebi/dircolors-solari
 
 # Install dotfiles
 pushd ~/
+[ -f .aliases ] && mv .aliases .aliases.bck
+cp $DIR/.aliases .aliases
 [ -f .bash_profile ] && mv .bash_profile .bash_profile.bck
 cp $DIR/.bash_profile .bash_profile
 [ -f .bashrc ] && mv .bashrc .bashrc.bck
+cp $DIR/.bashrc .bashrc
 [ -f .gitconfig ] && mv .gitconfig .gitconfig.bck
 cp $DIR/.gitconfig .gitconfig
 [ -f .gitignore_global ] && mv .gitignore_global .gitignore_global.bck
