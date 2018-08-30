@@ -5,7 +5,6 @@ source ~/.aliases
 export CLICOLOR=1
 # Solarized dark theme
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
-export GREP_OPTIONS='--color=always'
 
 # Prompt
 function nonzero_return() {
