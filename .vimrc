@@ -51,7 +51,7 @@ execute pathogen#infect()
 " vim-colors-solarized
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 " vim-airline
 set laststatus=2 " Always display the status line
 set timeoutlen=1000 ttimeoutlen=0
