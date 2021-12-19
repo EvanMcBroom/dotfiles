@@ -1,9 +1,15 @@
 " Settings that must come first
 set nocompatible " Use Vim settings instead of the Vi compatibility settings
 
+set encoding=utf-8 " ensure the encoding is set correctly
+set hlsearch " highlight search results
+set incsearch " enable incremental search with /
+set laststatus=2 " always show the status line
 set noautoindent " stop vim from autoindenting pasted code
-set nu " show non-relative line numbers
+set nowrap " do not wrap long lines
+set number " show non-relative line numbers
 set visualbell " stop the bell
+syntax on " turn on syntax highlighting
 
 " Show or hide whitespace (usage: set list[!])
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
