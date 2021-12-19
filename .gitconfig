@@ -1,6 +1,6 @@
 [user]
 	name = Evan McBroom
-	email = <>
+	email = 
 [core]
-	autocrlf = input
+	autocrlf = false
 	excludesfile = ~/.gitignore_global
