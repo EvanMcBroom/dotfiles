@@ -1,36 +1,62 @@
-# git config --global core.excludesfile '~/.gitignore_global'
+# Created by https://www.toptal.com/developers/gitignore/api/git,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,vim
+# Manually added https://github.com/github/gitignore/blob/main/community/OpenSSL.gitignore
 
-# git
-.gitignore
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
 
-# OS specific
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+### OpenSSL ###
+# Certificate Authority
+*.ca
+# Certificate
+*.crt
+# Certificate Sign Request
+*.csr
+# Certificate
+*.der
+# Key database file
+*.kdb
+# OSCP request data
+*.org
+# PKCS #12
+*.p12
+# PEM-encoded certificate data
+*.pem
+# Random number seed
+*.rnd
+# SSLeay data
+*.ssleay
+# S/MIME message
+*.smime
 
-# Python
-__pycache__/
-*.py[cod]
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+# Session
+Session.vim
+Sessionx.vim
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
 
-# C
-*.o
-*.ko
-*.lib
-*.a
-*.dll
-*.so
-*.so.*
-*.dylib
-*.exe
-*.out
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Vagrant
-.vagrant
+# End of https://www.toptal.com/developers/gitignore/api/git,vim
