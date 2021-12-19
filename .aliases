@@ -1,8 +1,0 @@
-# Shortcuts
-alias grep=grep\ --color=always
-alias ll=ls\ -la
-alias vi=vim
-alias tmux="TERM=screen-256color-bce tmux"
-if [ -n $TMUX ]; then
-   alias vim="TERM=screen-256color vim"
-fi
