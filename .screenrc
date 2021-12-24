@@ -1,0 +1,27 @@
+## General settings
+term screen-256color
+startup_message off
+defscrollback 100000 # Increase scrollback history
+vbell off # Disable the visual bell
+
+## Base Indexes
+bind c screen 1
+bind 0 select 10
+
+## Keybindings
+bind r eval "source ~/.screenrc" "echo 'Reloaded .screenrc!'"
+bind j focus down
+bind k focus up
+bind h focus left
+bind l focus right
+bind + resize +5
+bind - resize -5
+bind = resize =
+bindkey H prev
+bindkey L next
+bindkey "^[[5D" prev # Left arrow
+bindkey "^[[5C" next # Right arror
+
+## Status bar
+hardstatus alwayslastline
+hardstatus string "%H | %-Lw[%n%f %t]%+Lw%=%Y-%m-%d %C"
