@@ -20,7 +20,9 @@ export LC_ALL=en_US.UTF-8
 
 ## Colored output
 export CLICOLOR=1 # Enable colors for ls on FreeBSD and macOS
-export GREP_OPTIONS='--color=always' # Enable colors for [e|f]grep in a way that can be disabled
+alias egrep='egrep --color=always'
+alias fgrep='fgrep --color=always'
+alias grep='grep --color=always'
 alias less="less -R" # Enable colors for less
 alias ls="ls --color=auto" # Enable colors for GNU environments
 
