@@ -19,8 +19,8 @@ set shiftwidth=4 " number of spaces auto indent should use for an indent
 set expandtab " input spaces when tab is pressed
 
 " Timestamp shortcut and syntax highlighting
-nmap <F5> i<C-R>=strftime("[[%Y-%m-%d %H:%M:%S]] -- ")<CR><Esc>
-imap <F5> <C-R>=strftime("[[%Y-%m-%d %H:%M:%S]] -- ")<CR>
+nmap <F1> i<C-R>=strftime("[[%Y-%m-%d %H:%M:%S]] -- ")<CR><Esc>
+imap <F1> <C-R>=strftime("[[%Y-%m-%d %H:%M:%S]] -- ")<CR>
 syntax region wikilink start=/\[\[/ end=/\]\]/
 highlight wikilink ctermfg=5 guifg=SlateBlue " use :highlight for other options
 

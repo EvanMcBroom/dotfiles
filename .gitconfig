@@ -1,6 +1,6 @@
 [user]
 	name = Evan McBroom
-	email = 
+	email = 15305789+EvanMcBroom@users.noreply.github.com
 [core]
 	autocrlf = false
 	excludesfile = ~/.gitignore_global
