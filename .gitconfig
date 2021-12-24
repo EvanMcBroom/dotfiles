@@ -11,3 +11,4 @@
 			echo '\\nActivity:' && git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(objectname) %(objecttype) %(refname:short)' && \
 			echo '\\nMain contributors:' && git shortlog -s -n | head -n 10; \
 		}; f"
+    unstage = reset HEAD --
