@@ -1,6 +1,7 @@
 " Settings that must come first
 set nocompatible " Use Vim settings instead of the Vi compatibility settings
 
+" General settings
 set encoding=utf-8 " ensure the encoding is set correctly
 set hlsearch " highlight search results
 set incsearch " enable incremental search with /
@@ -11,8 +12,11 @@ set number " show non-relative line numbers
 set visualbell " stop the bell
 syntax on " turn on syntax highlighting
 
-" Show or hide whitespace (usage: set list[!])
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+" Set to use spaces instead of tabs
+filetype plugin indent on " enable file type recognition and smart indent support
+set tabstop=4 " set the width of tabs to be 4 spaces
+set shiftwidth=4 " number of spaces auto indent should use for an indent
+set expandtab " input spaces when tab is pressed
 
 " Timestamp shortcut and syntax highlighting
 nmap <F5> i<C-R>=strftime("[[%Y-%m-%d %H:%M:%S]] -- ")<CR><Esc>
