@@ -6,6 +6,7 @@ if [[ -z "$DATA_DIR" ]]; then
     export DATA_DIR=~/.local
     mkdir -p $DATA_DIR
 fi
+export PATH=$PATH:$DATA_DIR/bin
 # Do not include your user or group name when creating a tar archive
 export TAR_OPTIONS="--numeric-owner --owner=0 --group=0"
 # Prompt format: coffee-icon [terminal] username@short-hostname#/$
