@@ -60,6 +60,9 @@ clean () {
         echo "About to reset to a clean state and shutdown."
         read -p "Are you sure you want to continue [y/N]? " -r
         if [[ $REPLY =~ ^[Yy]$ ]]; then
+            # Clear command history
+            unset HISTFILE HISTFILESIZE HISTSIZE
+            history -c
             docker ps -q | xargs -i{} docker kill {} # Stop all docker containers
             docker ps -a -q | xargs -i{} docker rm {} # Remove all docker containers
             docker images -q | xargs -i{} docker rmi {} # Remove all docker images
@@ -73,7 +76,7 @@ clean () {
             ip6tables -F
             [ -d "/var/log" ] && echo "y" | shredder /var/log # Clear all runtime logs
             dmesg -C # Clear the kernel ring buffer
-            find ~ -maxdepth 1 \( -name ".*history" -o -name ".*hst*" -o -name ".*info" \) | xargs -i{} rm -f {} # Clear user history
+            find ~ -maxdepth 1 \( -name ".*history" -o -name ".*hst*" -o -name ".*info" \) | xargs -i{} shred -f {} # Clear user history files
             sync # Complete all writes
             shutdown -h now
         fi
