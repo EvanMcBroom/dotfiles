@@ -13,7 +13,7 @@ export TAR_OPTIONS="--numeric-owner --owner=0 --group=0"
 export PS1="☕ [\l] \u@\h\\$\[$(tput sgr0)\] "
 # Set the default editor to vim
 export VISUAL=vim
-export EDITOR="$VISUAL"
+export EDITOR="$VISUAL sudo -E visudo"
 # Set the language
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
