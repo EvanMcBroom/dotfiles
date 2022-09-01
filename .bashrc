@@ -18,6 +18,9 @@ export EDITOR="$VISUAL sudo -E visudo"
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+# Set the history file location and output format
+export HISTTIMEFORMAT="%F %T %Z "
+[ $SUDO_USER ] && export HISTFILE="$HOME/.bash_${SUDO_USER}_history"
 
 ## Colored output
 export CLICOLOR=1 # Enable colors for ls on FreeBSD and macOS
