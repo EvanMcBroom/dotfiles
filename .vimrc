@@ -9,7 +9,7 @@ set laststatus=2 " always show the status line
 set noautoindent " stop vim from autoindenting pasted code
 set nowrap " do not wrap long lines
 set number " show non-relative line numbers
-set visualbell " stop the bell
+set belloff=all " stop the bell
 syntax on " turn on syntax highlighting
 
 " Set to use spaces instead of tabs
