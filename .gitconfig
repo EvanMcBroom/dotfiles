@@ -6,7 +6,7 @@
 	excludesfile = ~/.gitignore_global
 [alias]
 	tldr = "!f() { \
-			printf 'On %s, %s tracked files, %s authors\n' $(git rev-parse --abbrev-ref HEAD) $(git ls-files | wc -l) $(git rev-list --all --count) && \
+			printf 'On %s, %s tracked files, %s commits\n' $(git rev-parse --abbrev-ref HEAD) $(git ls-files | wc -l) $(git rev-list --all --count) && \
 			echo '\nRemote sources:' && git remote -v && \
 			echo '\nActivity:' && git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(objectname) %(objecttype) %(refname:short)' && \
 			echo '\nMain contributors:' && git shortlog -s -n | head -n 10; \
