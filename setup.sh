@@ -30,6 +30,7 @@ elif [ $1 = "apply" ]; then
         echo "$(basename $file) -> ~/$(basename $file)"
         cp $file ~
     done
+    printf "\nNote: Update the user name and email in the .gitconfig file\n"
 elif [ $1 = "destroy" ]; then
     if [ -d "$HOME/.dotfiles" ]; then
         find ~ -maxdepth 1 -type f -name ".*" | xargs -i{} rm {}

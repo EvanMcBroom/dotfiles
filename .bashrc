@@ -29,6 +29,8 @@ alias fgrep='fgrep --color=always'
 alias grep='grep --color=always'
 alias less="less -R" # Enable colors for less
 alias ls="ls --color=auto" # Enable colors for GNU environments
+# Enable the Nord color scheme for ls output. This should work work well with most dark terminal backgrounds
+[ -x "$(command -v dircolors)" ] && [ -r ~/.dircolors ] && eval "$(dircolors -b ~/.dircolors)"
 
 ## Shortcuts
 alias 7z="7z a -mhe=on -p" # Encrypt the archive header and data
