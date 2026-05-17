@@ -263,6 +263,22 @@ data-export () {
     tar -C "$DATA_DIR" -czf "$archive_path" "${export_paths[@]}" && echo "$archive_path"
 }
 
+# Import crypt, log, and note files from a previous
+# data export archive to $DATA_DIR
+data-import () {
+    local archive_path="$1"
+    if [ -z "$archive_path" ]; then
+        echo "Usage: data-import <archive-path>"
+        return 1
+    elif [ ! -f "$archive_path" ]; then
+        echo "Archive not found: $archive_path"
+        return 1
+    fi
+
+    mkdir -p "$DATA_DIR"
+    tar -C "$DATA_DIR" -xzf "$archive_path" && echo "$DATA_DIR"
+}
+
 # Generate a random password
 # If OpenSSL is installed generate the shadow hash as well
 genpass () {
