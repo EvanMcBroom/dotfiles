@@ -282,7 +282,11 @@ data-import () {
 # Generate a random password
 # If OpenSSL is installed generate the shadow hash as well
 genpass () {
-    password=$(tr -dc a-zA-Z0-9 < /dev/urandom | head -c 12)
+    if command -v shuf &> /dev/null && [ -r /usr/share/dict/words ]; then
+        password=$(shuf -n 4 /usr/share/dict/words | paste -sd "-" -)
+    else
+        password=$(tr -dc a-zA-Z0-9 < /dev/urandom | head -c 12)
+    fi
     echo "Password: $password"
     if command -v openssl &> /dev/null; then
         # https://unix.stackexchange.com/a/81248
