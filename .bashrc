@@ -305,6 +305,7 @@ keys () {
     export SSH_AUTH_SOCK="$DATA_DIR/.ssh_auth_sock"
     ssh-add -l
 }
+alias agent='keys'
 
 # Start an ISO 8601 time stamped terminal logging session
 # Used 'exit' to end the session
