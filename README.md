@@ -9,7 +9,7 @@ It is recommended to read the shortcuts and functions in `.bashrc` and `.vimrc`.
 ## Quick setup &ndash; if you’ve ran this thing before
 
 ```bash
-git clone https://github.com/EvanMcBroom/dotfiles && ./dotfiles/setup.sh apply
+curl -fsSL https://raw.githubusercontent.com/EvanMcBroom/dotfiles/master/install.sh | sh
 ```
 
 > [!NOTE]
